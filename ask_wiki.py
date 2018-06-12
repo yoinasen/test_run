@@ -4,6 +4,11 @@ import urllib2
 import urllib
 import sys
 
+"""
+TODO:
+move content to a function, have it exception safe.. etc'
+"""
+
 def main():
     url = "https://en.wikipedia.org/wiki/"
     keyword = raw_input("what would you like to Wiki search for? ")
@@ -18,7 +23,7 @@ def main():
     req = urllib2.Request(url=url, data=encoded_data)
     fp = urllib2.urlopen(req)
 
-    with open("result.html", "w+") as result_fp:
+    with open("result.html", "wb+") as result_fp:
         result_fp.write(fp.read())
         result_fp.close()
 
