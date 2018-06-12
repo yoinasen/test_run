@@ -1,0 +1,5 @@
+venv
+.idea
+*.pyc
+*.out
+result.html
