@@ -25,8 +25,6 @@ def main():
 
     with open("result.html", "wb+") as result_fp:
         result_fp.write(fp.read())
-        result_fp.close()
-
 
 if __name__ == "__main__":
     main()   
